@@ -15,12 +15,12 @@
   .brand small{ display:block; font-size:11pt; font-weight:400; opacity:.85; letter-spacing:.5px; margin-top:2mm }
   .h1{ font-size:32pt; font-weight:800; line-height:1.05; margin:4mm 0 2mm }
   .sub{ font-size:14pt; opacity:.92 }
-  .illus{ height:26mm; background:var(--teal-l); display:flex; align-items:center; justify-content:center; padding:2mm 12mm }
-  .illus img{ height:100%; width:auto; max-width:100%; object-fit:contain; border-radius:3mm; border:1px solid var(--line); display:block }
+  .illus-side{ flex:1.1; display:flex; align-items:center }
+  .illus-side img{ width:100%; border-radius:3mm; border:1px solid var(--line); display:block }
 
-  .body{ flex:1; padding:6mm 14mm; display:flex; flex-direction:column; gap:4mm }
+  .body{ flex:1; padding:5mm 14mm; display:flex; flex-direction:column; gap:3mm }
 
-  .price{ border:2px solid var(--teal); border-radius:6mm; padding:6mm; text-align:center; background:var(--teal-l) }
+  .price{ border:2px solid var(--teal); border-radius:6mm; padding:5mm; text-align:center; background:var(--teal-l) }
   .price .from{ font-size:11pt; color:var(--muted) }
   .price .big{ font-size:52pt; font-weight:800; color:var(--coral); line-height:1 }
   .price .lbl{ font-size:15pt; font-weight:700 }
@@ -30,15 +30,16 @@
   .promo{ background:var(--coral); color:#fff; text-align:center; font-weight:800; font-size:13pt; padding:3mm; border-radius:3mm }
   .promo small{ display:block; font-size:9pt; font-weight:400; opacity:.9; margin-top:1mm }
   .mid{ display:flex; gap:8mm; align-items:center }
-  .feats{ flex:1; display:flex; flex-direction:column; gap:3mm; font-size:12pt }
+  .midright{ flex:1; display:flex; flex-direction:column; gap:3mm; align-items:center }
+  .feats{ display:flex; flex-direction:column; gap:2.5mm; font-size:11pt }
   .feat{ display:flex; gap:3mm; align-items:flex-start }
   .feat .c{ color:var(--teal); font-weight:800 }
-  .qr{ width:46mm; text-align:center; flex:none }
-  .qr img{ width:42mm; height:42mm; display:block; margin:0 auto 2mm }
+  .qr{ width:40mm; text-align:center; flex:none }
+  .qr img{ width:36mm; height:36mm; display:block; margin:0 auto 1.5mm }
   .qr .cap{ font-size:9.5pt; color:var(--muted); line-height:1.3 }
   .qr .url{ font-size:8.5pt; color:var(--teal); font-weight:700; line-height:1.3 }
 
-  .contact{ text-align:center; border-top:1px solid var(--line); padding-top:5mm }
+  .contact{ text-align:center; border-top:1px solid var(--line); padding-top:4mm }
   .contact .ph{ font-size:30pt; font-weight:800; color:var(--teal); letter-spacing:1px }
   .contact .ways{ font-size:11pt; color:var(--muted); margin-top:1mm }
 
@@ -59,8 +60,6 @@
     <div class="sub">Dormez fenêtres ouvertes, l'esprit tranquille.</div>
   </div>
 
-  <div class="illus"><img src="affiche-fenetre.png" alt="Fenêtre ouverte protégée par une moustiquaire"></div>
-
   <div class="body">
 
     <div class="price">
@@ -73,16 +72,19 @@
     <div class="promo">🎁 OFFRE DE LANCEMENT : 2 fenêtres posées = la 3ᵉ OFFERTE<small>soit 3 fenêtres pour 100 € au lieu de 150 €</small></div>
 
     <div class="mid">
-      <div class="feats">
-        <div class="feat"><span class="c">✓</span><span><b>Pose à domicile</b> — rapide et soignée</span></div>
-        <div class="feat"><span class="c">✓</span><span><b>Sur mesure</b> — toutes fenêtres, portes, vélux</span></div>
-        <div class="feat"><span class="c">✓</span><span><b>Tarif clair</b> — annoncé avant l'intervention</span></div>
-        <div class="feat"><span class="c">✓</span><span><b>Artisan local</b> — Boulogne &amp; Paris Ouest</span></div>
-      </div>
-      <div class="qr">
-        <img src="qr-site.png" alt="QR code">
-        <div class="cap">Scannez pour les tarifs,<br>photos et contact direct</div>
-        <div class="url">zero-moustique.github.io/<br>moustiquaires</div>
+      <div class="illus-side"><img src="affiche-fenetre.png" alt="Fenêtre ouverte protégée par une moustiquaire"></div>
+      <div class="midright">
+        <div class="feats">
+          <div class="feat"><span class="c">✓</span><span><b>Pose à domicile</b> — rapide et soignée</span></div>
+          <div class="feat"><span class="c">✓</span><span><b>Sur mesure</b> — toutes fenêtres, portes, vélux</span></div>
+          <div class="feat"><span class="c">✓</span><span><b>Tarif clair</b> — annoncé avant l'intervention</span></div>
+          <div class="feat"><span class="c">✓</span><span><b>Artisan local</b> — Boulogne &amp; Paris Ouest</span></div>
+        </div>
+        <div class="qr">
+          <img src="qr-site.png" alt="QR code">
+          <div class="cap">Scannez pour tarifs, photos et contact</div>
+          <div class="url">zero-moustique.github.io/moustiquaires</div>
+        </div>
       </div>
     </div>
 
