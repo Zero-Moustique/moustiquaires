@@ -55,9 +55,11 @@
     color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800}
   .zone{background:var(--teal-l);border-radius:14px;padding:18px;text-align:center}
   .zone b{color:var(--teal)}
-  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block}
-  .gallery-note{color:var(--muted);font-size:14px;margin:-6px 0 14px}
+  .gallery{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .gallery figure{margin:0;max-width:260px}
+  .gallery img{width:100%;border-radius:12px;display:block}
+  .gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+  .gallery-note{color:var(--muted);font-size:14px;margin:-6px 0 16px}
 
   footer{background:var(--ink);color:#cfd8d4;text-align:center;padding:26px 20px;font-size:14px}
   footer a{color:#fff;font-weight:700;text-decoration:none}
@@ -116,6 +118,17 @@
     <div class="feat"><div class="chk">✓</div><div><b>Sur mesure</b> — toutes fenêtres, portes, baies, vélux.</div></div>
     <div class="feat"><div class="chk">✓</div><div><b>Rapide et soigné</b> — intervention sans engagement.</div></div>
     <div class="feat"><div class="chk">✓</div><div><b>Près de chez vous</b> — artisan local et disponible.</div></div>
+  </section>
+
+  <section>
+    <h2>Nos réalisations</h2>
+    <p class="gallery-note">La toile laisse passer l'air et la lumière — on la remarque à peine.</p>
+    <div class="gallery">
+      <figure>
+        <img src="photos/realisation-1.jpg" alt="Moustiquaire posée sur une fenêtre — Zéro Moustique" loading="lazy">
+        <figcaption>Pose récente — maille ultra-discrète.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section>

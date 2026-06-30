@@ -10,13 +10,15 @@
   html,body{ font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink) }
   .page{ width:210mm; height:297mm; margin:0 auto; background:#fff; display:flex; flex-direction:column; overflow:hidden }
 
-  .top{ background:var(--teal); color:#fff; text-align:center; padding:11mm 12mm 9mm }
+  .top{ background:var(--teal); color:#fff; text-align:center; padding:8mm 12mm 6mm }
   .brand{ font-size:30pt; font-weight:800; letter-spacing:.5px }
   .brand small{ display:block; font-size:11pt; font-weight:400; opacity:.85; letter-spacing:.5px; margin-top:2mm }
-  .h1{ font-size:34pt; font-weight:800; line-height:1.05; margin:7mm 0 3mm }
+  .h1{ font-size:32pt; font-weight:800; line-height:1.05; margin:4mm 0 2mm }
   .sub{ font-size:14pt; opacity:.92 }
+  .illus{ height:50mm; background:var(--teal-l); display:flex; align-items:center; justify-content:center; padding:3mm 12mm }
+  .illus img{ height:100%; width:auto; max-width:100%; object-fit:contain; border-radius:3mm; border:1px solid var(--line); display:block }
 
-  .body{ flex:1; padding:8mm 14mm; display:flex; flex-direction:column; gap:6mm }
+  .body{ flex:1; padding:6mm 14mm; display:flex; flex-direction:column; gap:4mm }
 
   .price{ border:2px solid var(--teal); border-radius:6mm; padding:6mm; text-align:center; background:var(--teal-l) }
   .price .from{ font-size:11pt; color:var(--muted) }
@@ -39,7 +41,7 @@
   .contact .ways{ font-size:11pt; color:var(--muted); margin-top:1mm }
 
   .tear-hint{ text-align:center; font-size:9pt; color:var(--muted); border-top:1px dashed #B4B2A9; padding-top:2mm; margin:0 14mm }
-  .tabs{ display:flex; height:34mm; margin:0 8mm 6mm }
+  .tabs{ display:flex; height:30mm; margin:0 8mm 5mm }
   .tab{ flex:1; border-left:1px dashed #C9D6D0; display:flex; align-items:center; justify-content:center;
         writing-mode:vertical-rl; font-size:10pt; font-weight:700; color:var(--teal); text-align:center; line-height:1.25 }
   .tab:first-child{ border-left:none }
@@ -54,6 +56,8 @@
     <div class="h1">Marre des moustiques&nbsp;?</div>
     <div class="sub">Dormez fenêtres ouvertes, l'esprit tranquille.</div>
   </div>
+
+  <div class="illus"><img src="affiche-fenetre.png" alt="Fenêtre ouverte protégée par une moustiquaire"></div>
 
   <div class="body">
 
