@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Affiche A4 — Zéro Moustique</title>
+<style>
+  @page{ size:A4; margin:0 }
+  *{ margin:0; padding:0; box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  :root{ --teal:#0E6E54; --teal-d:#0B5C48; --teal-l:#F2FAF7; --coral:#C8501F; --ink:#1C2A26; --muted:#5B6B66; --line:#D9E5E0 }
+  html,body{ font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink) }
+  .page{ width:210mm; height:297mm; margin:0 auto; background:#fff; display:flex; flex-direction:column; overflow:hidden }
+
+  .top{ background:var(--teal); color:#fff; text-align:center; padding:11mm 12mm 9mm }
+  .brand{ font-size:30pt; font-weight:800; letter-spacing:.5px }
+  .brand small{ display:block; font-size:11pt; font-weight:400; opacity:.85; letter-spacing:.5px; margin-top:2mm }
+  .h1{ font-size:34pt; font-weight:800; line-height:1.05; margin:7mm 0 3mm }
+  .sub{ font-size:14pt; opacity:.92 }
+
+  .body{ flex:1; padding:8mm 14mm; display:flex; flex-direction:column; gap:6mm }
+
+  .price{ border:2px solid var(--teal); border-radius:6mm; padding:6mm; text-align:center; background:var(--teal-l) }
+  .price .from{ font-size:11pt; color:var(--muted) }
+  .price .big{ font-size:52pt; font-weight:800; color:var(--coral); line-height:1 }
+  .price .lbl{ font-size:15pt; font-weight:700 }
+  .price .alt{ font-size:11pt; color:var(--muted); margin-top:3mm; border-top:1px solid var(--line); padding-top:3mm }
+  .price .alt b{ color:var(--teal) }
+
+  .mid{ display:flex; gap:8mm; align-items:center }
+  .feats{ flex:1; display:flex; flex-direction:column; gap:3mm; font-size:12pt }
+  .feat{ display:flex; gap:3mm; align-items:flex-start }
+  .feat .c{ color:var(--teal); font-weight:800 }
+  .qr{ width:46mm; text-align:center; flex:none }
+  .qr img{ width:42mm; height:42mm; display:block; margin:0 auto 2mm }
+  .qr .cap{ font-size:9.5pt; color:var(--muted); line-height:1.3 }
+  .qr .url{ font-size:8.5pt; color:var(--teal); font-weight:700; line-height:1.3 }
+
+  .contact{ text-align:center; border-top:1px solid var(--line); padding-top:5mm }
+  .contact .ph{ font-size:30pt; font-weight:800; color:var(--teal); letter-spacing:1px }
+  .contact .ways{ font-size:11pt; color:var(--muted); margin-top:1mm }
+
+  .tear-hint{ text-align:center; font-size:9pt; color:var(--muted); border-top:1px dashed #B4B2A9; padding-top:2mm; margin:0 14mm }
+  .tabs{ display:flex; height:34mm; margin:0 8mm 6mm }
+  .tab{ flex:1; border-left:1px dashed #C9D6D0; display:flex; align-items:center; justify-content:center;
+        writing-mode:vertical-rl; font-size:10pt; font-weight:700; color:var(--teal); text-align:center; line-height:1.25 }
+  .tab:first-child{ border-left:none }
+  .tab .u{ color:var(--muted); font-weight:400; font-size:8pt }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="brand">ZÉRO MOUSTIQUE<small>Pose de moustiquaires sur mesure · Boulogne &amp; Paris Ouest</small></div>
+    <div class="h1">Marre des moustiques&nbsp;?</div>
+    <div class="sub">Dormez fenêtres ouvertes, l'esprit tranquille.</div>
+  </div>
+
+  <div class="body">
+
+    <div class="price">
+      <div class="from">À partir de</div>
+      <div class="big">50&nbsp;€</div>
+      <div class="lbl">la fenêtre standard, posée</div>
+      <div class="alt">Portes, baies, vélux, toute dimension <b>sur mesure → devis gratuit</b></div>
+    </div>
+
+    <div class="mid">
+      <div class="feats">
+        <div class="feat"><span class="c">✓</span><span><b>Pose à domicile</b> — rapide et soignée</span></div>
+        <div class="feat"><span class="c">✓</span><span><b>Sur mesure</b> — toutes fenêtres, portes, vélux</span></div>
+        <div class="feat"><span class="c">✓</span><span><b>Tarif clair</b> — annoncé avant l'intervention</span></div>
+        <div class="feat"><span class="c">✓</span><span><b>Artisan local</b> — Boulogne &amp; Paris Ouest</span></div>
+      </div>
+      <div class="qr">
+        <img src="qr-site.png" alt="QR code">
+        <div class="cap">Scannez pour les tarifs,<br>photos et contact direct</div>
+        <div class="url">zero-moustique.github.io/<br>moustiquaires</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="ph">07 85 41 95 95</div>
+      <div class="ways">Appel · SMS · WhatsApp — devis gratuit</div>
+    </div>
+
+  </div>
+
+  <div class="tear-hint">✂ &nbsp;Détachez un numéro et emportez-le</div>
+  <div class="tabs">
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+    <div class="tab">Zéro Moustique<br>07 85 41 95 95</div>
+  </div>
+
+</div>
+</body>
+</html>
