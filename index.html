@@ -7,97 +7,120 @@
 <meta name="description" content="Zéro Moustique — pose de moustiquaires à domicile, sur mesure, à Boulogne-Billancourt et Paris Ouest. 50 € la fenêtre standard, posée. Devis gratuit.">
 <style>
   :root{
-    --teal:#0E6E54; --teal-d:#0B5C48; --teal-l:#F2FAF7;
-    --coral:#C8501F; --ink:#1C2A26; --muted:#5B6B66; --line:#E1EAE6;
+    --green:#1F7A3D; --green-d:#176030; --green-l:#EAF4ED;
+    --orange:#E0731C; --orange-d:#C2611410;
+    --cream:#FAF5EC; --ink:#243027; --muted:#5B6B66;
+    --line:#EAE2D2; --wa:#25D366;
+    --radius:18px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);line-height:1.5;background:#fff;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:560px;margin:0 auto;padding:0 20px}
+    color:var(--ink);line-height:1.5;background:var(--cream);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:560px;margin:0 auto;padding:0 18px}
   a{color:inherit}
+  img{display:block}
 
-  header{background:var(--teal);color:#fff;text-align:center;padding:14px 20px}
-  header .brand{font-size:17px;font-weight:700;letter-spacing:.2px}
-  header .sub{font-size:13px;opacity:.85;margin-top:2px}
+  /* HERO : l'image porte la marque + le slogan */
+  .hero{max-width:560px;margin:0 auto}
+  .hero img{width:100%;border-bottom-left-radius:22px;border-bottom-right-radius:22px;
+    box-shadow:0 14px 34px rgba(36,48,39,.16)}
 
-  .hero{background:var(--teal);color:#fff;text-align:center;padding:8px 20px 36px}
-  .hero h1{font-size:30px;line-height:1.2;font-weight:800;margin:10px 0}
-  .hero p{font-size:17px;opacity:.92;max-width:420px;margin:0 auto}
-  .pill{display:inline-block;background:var(--teal-d);color:#CDEFE4;font-size:13px;
-    padding:6px 14px;border-radius:999px;margin-top:6px}
-
-  .heroimg{margin:-30px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px rgba(0,0,0,.14)}
-  .heroimg img{width:100%;display:block}
-  .price{background:var(--teal-l);border:1.5px solid var(--teal);border-radius:18px;
-    padding:22px;text-align:center;margin:18px auto 0;position:relative;box-shadow:0 6px 24px rgba(14,110,84,.10)}
-  .price .from{color:var(--muted);font-size:14px}
-  .price .big{color:var(--coral);font-size:54px;font-weight:800;line-height:1;margin:4px 0}
+  /* CARTE PRIX */
+  .card{background:#fff;border-radius:var(--radius);box-shadow:0 8px 26px rgba(36,48,39,.08)}
+  .price{padding:24px 22px;text-align:center;margin:22px auto 0}
+  .price .from{color:var(--muted);font-size:15px}
+  .price .big{color:var(--orange);font-size:58px;font-weight:800;line-height:1;margin:4px 0 2px}
   .price .lbl{font-size:17px;font-weight:700}
-  .price .alt{color:var(--muted);font-size:14px;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+  .price .alt{color:var(--muted);font-size:14px;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+  .price .alt b{color:var(--ink)}
 
-  .promo{background:var(--coral);color:#fff;text-align:center;font-weight:700;padding:12px 16px;border-radius:12px;margin:18px 0;font-size:15px;line-height:1.4;box-shadow:0 6px 20px rgba(200,80,31,.25)}
-  .promo .big{display:block;font-size:17px;font-weight:800}
-  .cta{display:flex;gap:12px;margin:22px 0}
-  .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  /* BANDEAU OFFRE */
+  .promo{background:var(--orange);color:#fff;text-align:center;border-radius:var(--radius);
+    padding:16px 18px;margin:18px 0;box-shadow:0 8px 22px rgba(224,115,28,.28)}
+  .promo .top{font-size:15px;font-weight:700;opacity:.95}
+  .promo .big{display:block;font-size:18px;font-weight:800;margin-top:3px;line-height:1.35}
+
+  /* BOUTONS */
+  .cta{display:flex;gap:12px;margin:18px 0 6px}
+  .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;
     text-decoration:none;font-weight:700;font-size:17px;padding:16px;border-radius:14px}
-  .btn-call{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(200,80,31,.30)}
-  .btn-wa{background:#25D366;color:#0b3d1f}
-  .btn svg{width:20px;height:20px;fill:currentColor}
+  .btn-call{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(224,115,28,.30)}
+  .btn-wa{background:var(--wa);color:#08351a;box-shadow:0 8px 20px rgba(37,211,102,.28)}
+  .btn svg{width:21px;height:21px;fill:currentColor;flex:none}
 
-  section{padding:30px 0;border-top:1px solid var(--line)}
-  h2{font-size:20px;font-weight:800;margin-bottom:16px}
-  .steps{display:flex;flex-direction:column;gap:14px}
-  .step{display:flex;gap:14px;align-items:flex-start}
-  .num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;
-    font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
-  .step b{display:block}
+  /* SECTIONS */
+  section{padding:30px 0 6px}
+  h2{font-size:21px;font-weight:800;margin-bottom:18px}
+
+  /* ÉTAPES */
+  .steps{display:flex;flex-direction:column;gap:16px}
+  .step{display:flex;gap:15px;align-items:flex-start;background:#fff;border-radius:14px;
+    padding:14px 16px;box-shadow:0 6px 18px rgba(36,48,39,.06)}
+  .num{flex:none;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;
+    font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px}
+  .step b{display:block;margin-bottom:1px}
   .step span{color:var(--muted);font-size:15px}
 
-  .feat{display:flex;gap:10px;align-items:center;padding:10px 0}
-  .feat .chk{flex:none;width:24px;height:24px;border-radius:50%;background:var(--teal-l);
-    color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800}
-  .zone{background:var(--teal-l);border-radius:14px;padding:18px;text-align:center}
-  .zone b{color:var(--teal)}
-  .gallery{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .gallery figure{margin:0;max-width:260px}
-  .gallery img{width:100%;border-radius:12px;display:block}
-  .gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
-  .gallery-note{color:var(--muted);font-size:14px;margin:-6px 0 16px}
+  /* AVANTAGES (pictos ronds) */
+  .feats{display:flex;flex-direction:column;gap:14px}
+  .feat{display:flex;gap:14px;align-items:center;background:#fff;border-radius:14px;
+    padding:13px 15px;box-shadow:0 6px 18px rgba(36,48,39,.06)}
+  .ico{flex:none;width:46px;height:46px;border-radius:50%;background:var(--green-l);
+    display:flex;align-items:center;justify-content:center}
+  .ico svg{width:24px;height:24px;fill:none;stroke:var(--green);stroke-width:2;
+    stroke-linecap:round;stroke-linejoin:round}
+  .feat .txt{font-size:15px}
+  .feat .txt b{color:var(--ink)}
 
-  footer{background:var(--ink);color:#cfd8d4;text-align:center;padding:26px 20px;font-size:14px}
+  /* RÉALISATIONS */
+  .real{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 26px rgba(36,48,39,.08)}
+  .real img{width:100%}
+  .real figcaption{padding:14px 16px}
+  .real figcaption .cap{font-weight:700;font-size:15px}
+  .real figcaption .sub{color:var(--muted);font-size:14px;margin-top:4px}
+
+  /* ZONE */
+  .zone{background:var(--green-l);border-radius:var(--radius);padding:20px;text-align:center;
+    font-size:15px}
+  .zone b{color:var(--green)}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#cfd8d2;text-align:center;padding:28px 20px;font-size:14px;margin-top:30px}
+  footer b{color:#fff}
   footer a{color:#fff;font-weight:700;text-decoration:none}
 
+  /* BARRE FIXE */
   .bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);
-    display:flex;gap:10px;padding:10px 14px;box-shadow:0 -4px 20px rgba(0,0,0,.06);z-index:50}
+    display:flex;gap:10px;padding:10px 14px;box-shadow:0 -4px 20px rgba(36,48,39,.08);z-index:50}
   .bar .btn{padding:14px;font-size:16px}
   .pad{height:84px}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="brand">ZÉRO&nbsp;MOUSTIQUE</div>
-  <div class="sub">Pose de moustiquaires · Boulogne &amp; Paris Ouest</div>
-</header>
-
+<!-- HERO : l'image contient déjà le logo, le slogan et l'accroche -->
 <div class="hero">
-  <span class="pill">Toile ultra-discrète · sur mesure</span>
-  <h1>Marre des moustiques&nbsp;?</h1>
-  <p>Dormez fenêtres ouvertes, l'esprit tranquille. Une toile si fine qu'on ne la voit presque pas — vos fenêtres restent comme avant.</p>
+  <img src="photos/hero-scene.jpg" alt="Zéro Moustique — pose de moustiquaires sur mesure à Boulogne &amp; Paris Ouest. Marre des moustiques ? Dormez fenêtres ouvertes." loading="lazy">
 </div>
 
 <div class="wrap">
-  <div class="heroimg"><img src="photos/hero.jpg" alt="Fenêtre protégée par une moustiquaire ultra-discrète" loading="lazy"></div>
-  <div class="price">
+
+  <!-- PRIX -->
+  <div class="card price">
     <div class="from">À partir de</div>
     <div class="big">50&nbsp;€</div>
     <div class="lbl">la fenêtre standard, posée</div>
     <div class="alt">Portes, baies, vélux, toute dimension sur mesure → <b>devis gratuit</b></div>
   </div>
 
-  <div class="promo">🎁 Offre de lancement<span class="big">2 fenêtres posées = la 3ᵉ offerte&nbsp;!</span></div>
+  <!-- OFFRE -->
+  <div class="promo">
+    <div class="top">🎁 Offre de lancement</div>
+    <span class="big">2 fenêtres posées = la 3ᵉ offerte&nbsp;!</span>
+  </div>
 
+  <!-- BOUTONS -->
   <div class="cta">
     <a class="btn btn-call" href="tel:+33785419595">
       <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
@@ -109,6 +132,7 @@
     </a>
   </div>
 
+  <!-- COMMENT ÇA MARCHE -->
   <section>
     <h2>Comment ça marche</h2>
     <div class="steps">
@@ -118,30 +142,51 @@
     </div>
   </section>
 
+  <!-- POURQUOI ME CHOISIR -->
   <section>
     <h2>Pourquoi me choisir</h2>
-    <div class="feat"><div class="chk">✓</div><div><b>Toile ultra-discrète</b> — on ne voit pas le maillage, vos fenêtres restent dégagées.</div></div>
-    <div class="feat"><div class="chk">✓</div><div><b>Tarif clair</b> — 50 € la fenêtre standard, posée.</div></div>
-    <div class="feat"><div class="chk">✓</div><div><b>Sur mesure</b> — toutes fenêtres, portes, baies, vélux.</div></div>
-    <div class="feat"><div class="chk">✓</div><div><b>Rapide et soigné</b> — intervention sans engagement.</div></div>
-    <div class="feat"><div class="chk">✓</div><div><b>Près de chez vous</b> — artisan local et disponible.</div></div>
-  </section>
-
-  <section>
-    <h2>Nos réalisations</h2>
-    <p class="gallery-note">La toile laisse passer l'air et la lumière — on la remarque à peine.</p>
-    <div class="gallery">
-      <figure>
-        <img src="photos/realisation-1.jpg" alt="Moustiquaire posée sur une fenêtre — Zéro Moustique" loading="lazy">
-        <figcaption>Pose récente — maille ultra-discrète.</figcaption>
-      </figure>
+    <div class="feats">
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <div class="txt"><b>Toile ultra-discrète</b> — on ne voit pas le maillage, vos fenêtres restent dégagées.</div>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 13.5l1.5 1.5 4-4"/></svg></div>
+        <div class="txt"><b>Tarif clair</b> — 50 € la fenêtre standard, posée.</div>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/></svg></div>
+        <div class="txt"><b>Sur mesure</b> — toutes fenêtres, portes, baies, vélux.</div>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13H11l-1 9 9-12h-6.5z"/></svg></div>
+        <div class="txt"><b>Rapide et soigné</b> — intervention sans engagement.</div>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.3-7-11a7 7 0 0114 0c0 5.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="txt"><b>Près de chez vous</b> — artisan local et disponible.</div>
+      </div>
     </div>
   </section>
 
+  <!-- RÉALISATIONS : une seule vraie photo -->
+  <section>
+    <h2>Nos réalisations</h2>
+    <figure class="real">
+      <img src="photos/realisation-1.jpg" alt="Moustiquaire posée sur une fenêtre — Zéro Moustique" loading="lazy">
+      <figcaption>
+        <div class="cap">Pose récente — maille ultra-discrète.</div>
+        <div class="sub">La toile laisse passer l'air et la lumière — on la remarque à peine.</div>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ZONE -->
   <section>
     <h2>Zone d'intervention</h2>
     <div class="zone">J'interviens à <b>Boulogne-Billancourt, Paris Ouest</b> et alentours.<br>Un doute&nbsp;? Appelez, je vous dis tout de suite.</div>
   </section>
+
 </div>
 
 <div class="pad"></div>
@@ -151,9 +196,16 @@
   Tél. <a href="tel:+33785419595">07 85 41 95 95</a> · Devis gratuit
 </footer>
 
+<!-- BARRE FIXE -->
 <div class="bar">
-  <a class="btn btn-call" href="tel:+33785419595">Appeler</a>
-  <a class="btn btn-wa" href="https://wa.me/33785419595?text=Bonjour,%20je%20voudrais%20un%20devis%20pour%20une%20moustiquaire.">WhatsApp</a>
+  <a class="btn btn-call" href="tel:+33785419595">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1z"/></svg>
+    Appeler
+  </a>
+  <a class="btn btn-wa" href="https://wa.me/33785419595?text=Bonjour,%20je%20voudrais%20un%20devis%20pour%20une%20moustiquaire.">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.7.8-2.7-.2-.3A8 8 0 1112 20zm4.6-5.9c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.2 7.2 0 01-1.3-1.6c-.1-.2 0-.4.1-.5l.4-.5.3-.5c.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6s1.7 2.7 4.2 3.8c1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.5-.3z"/></svg>
+    WhatsApp
+  </a>
 </div>
 
 </body>
