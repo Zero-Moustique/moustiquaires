@@ -73,9 +73,15 @@
   .feat .txt{font-size:15px}
   .feat .txt b{color:var(--ink)}
 
-  /* RÉALISATIONS */
-  .real{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 26px rgba(36,48,39,.08)}
-  .real img{width:100%}
+  /* RÉALISATIONS — galerie qui défile horizontalement */
+  .hint{color:var(--muted);font-size:14px;margin:-8px 0 14px;font-weight:600}
+  .gallery{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding:2px 2px 14px;
+    scrollbar-width:none;-ms-overflow-style:none}
+  .gallery::-webkit-scrollbar{display:none}
+  .real{flex:0 0 86%;scroll-snap-align:center;
+    background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 26px rgba(36,48,39,.08)}
+  .real img{width:100%;height:250px;object-fit:cover}
   .real figcaption{padding:14px 16px}
   .real figcaption .cap{font-weight:700;font-size:15px}
   .real figcaption .sub{color:var(--muted);font-size:14px;margin-top:4px}
@@ -169,16 +175,40 @@
     </div>
   </section>
 
-  <!-- RÉALISATIONS : une seule vraie photo -->
+  <!-- RÉALISATIONS : galerie qui défile -->
   <section>
     <h2>Nos réalisations</h2>
-    <figure class="real">
-      <img src="photos/realisation-1.jpg" alt="Moustiquaire posée sur une fenêtre — Zéro Moustique" loading="lazy">
-      <figcaption>
-        <div class="cap">Pose récente — maille ultra-discrète.</div>
-        <div class="sub">La toile laisse passer l'air et la lumière — on la remarque à peine.</div>
-      </figcaption>
-    </figure>
+    <div class="hint">👉 Faites glisser pour voir d'autres poses</div>
+    <div class="gallery">
+      <figure class="real">
+        <img src="photos/realisation-1.jpg" alt="Moustiquaire posée sur une fenêtre — Zéro Moustique" loading="lazy">
+        <figcaption>
+          <div class="cap">Pose récente — maille ultra-discrète.</div>
+          <div class="sub">La toile laisse passer l'air et la lumière — on la remarque à peine.</div>
+        </figcaption>
+      </figure>
+      <figure class="real">
+        <img src="photos/realisation-2.jpg" alt="Réalisation moustiquaire — Zéro Moustique" loading="lazy">
+        <figcaption>
+          <div class="cap">Fenêtre sur mesure.</div>
+          <div class="sub">Pose soignée, cadre discret.</div>
+        </figcaption>
+      </figure>
+      <figure class="real">
+        <img src="photos/realisation-3.jpg" alt="Réalisation moustiquaire — Zéro Moustique" loading="lazy">
+        <figcaption>
+          <div class="cap">Travail propre.</div>
+          <div class="sub">Toile tendue, finitions nettes.</div>
+        </figcaption>
+      </figure>
+      <figure class="real">
+        <img src="photos/realisation-4.jpg" alt="Réalisation moustiquaire — Zéro Moustique" loading="lazy">
+        <figcaption>
+          <div class="cap">Autre pose récente.</div>
+          <div class="sub">On dort fenêtres ouvertes, tranquille.</div>
+        </figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- ZONE -->
